@@ -10,15 +10,17 @@ if __name__ == '__main__':
             rotates = False
             if 'L' == direction:
                 if (number - value) > 0:
+                    rotates = False
                     number = number - value
                 elif (number - value) == 0:
-                    rotates = number != 0
+                    rotates = True
                     number = number - value
                 else:
                     rotates = number != 0
                     number = 100 - (value - number)
             else:
                 if (number + value) <= 99:
+                    rotates = False
                     number = number + value
                 else:
                     rotates = number != 0
